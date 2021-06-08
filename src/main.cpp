@@ -1,11 +1,8 @@
-#include <Test.hpp>
+#include <Engine.hpp>
 
-Test::Test() {
-    _value = 0;
-}
-    
-Test::Test(int value) {
-    _value = value;
-}
 
-int Test::get_value() { return _value; }
+int main() {
+    Engine engine = Engine();
+
+    return 0;
+}

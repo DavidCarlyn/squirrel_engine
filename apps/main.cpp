@@ -1,9 +1,18 @@
-#include <Test.hpp>
+#include <Engine.hpp>
 #include <iostream>
 
 int main() {
-    Test test = Test(5);
-    std::cout << test.get_value() << std::endl;
+    Engine engine = Engine();
+    GLFWwindow* window = engine.createWindow();
+
+    glfwMakeContextCurrent(window);
+
+    while (!glfwWindowShouldClose(window)) {
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    std::cout << "Success!" << std::endl;
 
     return 0;
 }
