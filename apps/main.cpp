@@ -1,9 +1,15 @@
+#include <glad/glad.h>
 #include <Engine.hpp>
 #include <iostream>
 
 int main() {
     Engine engine = Engine();
     GLFWwindow* window = engine.createWindow(); 
+
+    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
+        std::cout << "Failed to initialize OpenGL context" << std::endl;
+        return -1;
+    } 
 
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
