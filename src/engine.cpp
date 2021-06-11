@@ -30,10 +30,6 @@ GLFWwindow* Engine::createWindow() {
     }
 
     glfwMakeContextCurrent(window);
-    std::cerr << "HERE" << std::endl;
-    if (glewInit() != GLEW_OK) {
-        std::cerr << "Error initializing GLEW" << std::endl;
-    }
 
     return window;
 }
