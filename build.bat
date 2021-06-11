@@ -1,5 +1,5 @@
 cd build
 make
 cd ..\apps
-g++ -o app main.cpp -L ..\build\dependencies\glfw\src -lglfw3 -lgdi32 -lopengl32 -I ..\dependencies\glfw\include -L ..\build -lsquirrel_engine -I ..\src\include
+g++ -Wall main.cpp -I ..\dependencies\glew\include -I ..\dependencies\glfw\include -I ..\src\include -L ..\build\dependencies\glew\lib -lglewd -L ..\build\dependencies\glfw\src -lglfw3 -L ..\build -lsquirrel_engine -lgdi32 -lopengl32 -o app
 cd ..\

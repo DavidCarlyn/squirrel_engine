@@ -3,9 +3,7 @@
 
 int main() {
     Engine engine = Engine();
-    GLFWwindow* window = engine.createWindow();
-
-    glfwMakeContextCurrent(window);
+    GLFWwindow* window = engine.createWindow(); 
 
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
