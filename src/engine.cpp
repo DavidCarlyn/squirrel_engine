@@ -1,4 +1,4 @@
-#include <engine.hpp>
+#include <Engine.hpp>
 #include <iostream>
 
 Engine::Engine() {
@@ -8,6 +8,10 @@ Engine::Engine() {
         _failedInit = true;
         return;
     }
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // Set GLFW Error callback
     glfwSetErrorCallback(handleGLFWError);
